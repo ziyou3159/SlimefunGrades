@@ -1,0 +1,115 @@
+#最后一个节点后必须添加 true否则将不生效该节点.
+ProgressTree:
+  a0:
+    b0: true
+    b1: true
+    b2: true
+
+layout:
+  - "#########"
+  - "#   @   #"
+  - "#########"
+  - "#       #"
+  - "-###r###+"
+
+
+#每页最多可显示几个子进度
+num_title: 3
+
+
+#每页子进度可显示在以下 格子数
+#用于显示的格子数必须要多于最多可显示的子进度!
+
+
+nex_title:
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+
+
+#在此节点下编辑gui显示
+#slime_fun_id对应合成粘液物品的id
+Icons:
+  #此任务节点
+  a0:
+    slime_fun_id: 'OUTPUT_CHEST'
+    customModelData: 2200016
+    display:
+      name: "&6&l物品输出箱"
+      material: 'chest'
+      lore:
+        - ''
+        - '&3参考说明:'
+        - ''
+        - '&e   · &7该箱子对于那些希望优化'
+        - '&e   · &7提高自动生产效率的玩家尤为有用'
+    actions:
+      - 'command "toast ruge -t:task -icon:chest &d自动化收纳" as op'
+  b0:
+    slime_fun_id: 'CRUCIBLE'
+    customModelData: 2200252
+    display:
+      name: "&6&l坩埚"
+      material: 'CAULDRON'
+      lore:
+        - ''
+        - '&3参考说明:'
+        - ''
+        - '&e   · &7一个高级的材料处理工具'
+        - '&e   · &7可将方块转换为液体'
+    actions:
+      - 'command "toast ruge -t:task -icon:chest &d液化工具" as op'
+  b1:
+    slime_fun_id: 'ENHANCED_FURNACE'
+    customModelData: 2200292
+    display:
+      name: "&6&l强化熔炉"
+      material: 'FURNACE'
+      lore:
+        - ''
+        - '&3参考说明:'
+        - ''
+        - '&e   · &7强化熔炉不仅是一种高效的工业工具'
+        - '&e   · &7还代表了粘液科技中的科技进步和创新'
+    actions:
+      - 'command "toast ruge -t:task -icon:chest &d更高效的熔炉" as op'
+  b2:
+    slime_fun_id: 'CARBONADO_EDGED_FURNACE'
+    customModelData: 2200304
+    display:
+      name: "&6&l黑金刚石镶边熔炉"
+      material: 'FURNACE'
+      lore:
+        - ''
+        - '&3参考说明:'
+        - ''
+        - '&e   · &7这个革命性的设备'
+        - '&e   · &7将使你能够以前所未有的效率'
+        - '&e   · &7生产和烧制材料!'
+    actions:
+      - 'command "toast ruge -t:task -icon:chest &d精炼大师" as op'
+Gui-title:
+  "#":
+    customModelData: null
+    display:
+      name: "格挡板"
+      material: "black_stained_glass_pane"
+  "+":
+    customModelData: null
+    display:
+      name: "下一页"
+      material: "paper"
+  "-":
+    customModelData: null
+    display:
+      name: "上一页"
+      material: "paper"
+  "r":
+    customModelData: null
+    display:
+      name: "&x&f&6&b&8&9&9&l退出"
+      material: "paper"
